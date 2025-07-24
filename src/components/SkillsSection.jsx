@@ -73,6 +73,16 @@ const skills = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
     category: "tools" 
   },
+  { 
+    name: "Postman", 
+    logo: "projects/postman-icon-svgrepo-com.svg",
+    category: "tools" 
+  },
+  { 
+    name: "Render", 
+    logo: "projects/render-logo.jpeg",
+    category: "tools" 
+  },
 ];
 
 const categories = ["all", "language", "frontend", "backend", "tools"];
