@@ -105,13 +105,15 @@ export const Navbar = () => {
         {/* Mobile Nav */}
         <div className="flex items-center md:hidden">
           {/* Hamburger */}
-          <button
-            onClick={() => setIsMenuOpen(true)}
-            className="p-2 text-foreground z-50 dark:text-foreground/90"
-            aria-label="Open Menu"
-          >
-            <Menu size={24} />
-          </button>
+          {!isMenuOpen && (
+            <button
+              onClick={() => setIsMenuOpen(true)}
+              className="p-2 text-foreground z-50 dark:text-foreground/90"
+              aria-label="Open Menu"
+            >
+              <Menu size={24} />
+            </button>
+          )}
         </div>
 
         {/* Full-Screen Mobile Menu */}
@@ -123,13 +125,13 @@ export const Navbar = () => {
         >
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="self-end p-15 text-white"
+            className="absolute top-4 right-4 p-2 text-white z-50"
             aria-label="Close Menu"
           >
             <X size={28} />
           </button>
 
-          <div className="flex flex-col items-center justify-center flex-grow space-y-8">
+          <div className="flex flex-col items-center justify-start mt-24 flex-grow space-y-8">
             {navItems.map((item, key) => (
               <a
                 key={key}
